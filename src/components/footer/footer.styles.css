@@ -1,0 +1,61 @@
+._footer {
+  background: transparent;
+  padding: 2rem 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+._footer .container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+._footer .text_container {
+  position: relative;
+}
+
+._footer .text_container::before {
+  content: "";
+  position: absolute;
+  top: -0.5rem;
+  left: 0.15rem;
+  display: block;
+  min-height: 4px;
+  min-width: 4px;
+  border-radius: 50%;
+  background: var(--dt-primarry-color);
+}
+
+._footer .down_icon {
+  font-size: 2rem;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid #000000;
+  display: inline-flex;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+  top: 60%;
+  cursor: pointer;
+}
+
+._footer .icon_container .icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  font-size: 28px;
+  margin-bottom: 1rem;
+}
+
+._footer .icon_container .icons svg {
+    padding: 0.25rem;
+    background: rgba(245, 222, 178, 0.35);
+    border-radius: 50%;
+}

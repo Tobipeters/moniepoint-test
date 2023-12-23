@@ -1,0 +1,72 @@
+._card_container {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  left: 50%;
+  top: 50%;
+  margin-top: -250px;
+  margin-left: -250px;
+  display: flex;
+  justify-content: center;
+}
+
+._card_container .card {
+  height: 420px;
+  width: 370px;
+  border-radius: 40px;
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center ;
+  border: none;
+}
+
+._card_container .card:nth-child(1) {
+  background-color: #d8e2f4;
+  transform: rotate(0deg);
+  z-index: 4;
+}
+
+._card_container .card:nth-child(2) {
+  background-color: #ecece8;
+  transform: rotate(-8deg);
+  z-index: 3;
+}
+
+._card_container .card:nth-child(3) {
+  background-color: #c9aa91;
+  transform: rotate(-16deg);
+  z-index: 2;
+}
+
+._card_container .card:nth-child(4) {
+  background-color: #c9aa91;
+  transform: rotate(-24deg);
+  z-index: 1;
+}
+
+._card_container .card .tag{
+  height: 100%;
+  margin-bottom: 3.5rem;
+}
+
+._card_container .card .tag .tag_icon,
+._card_container .card .tag .tag_text {
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 1rem;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+}
+
+._card_container .card .tag .tag_icon {
+  border-radius: 50%;
+  width: 30px;
+  justify-content: center;
+}
+
+._card_container .card .tag .tag_text {
+  border-radius: 20px;
+  padding: 0 1rem;
+}

@@ -1,42 +1,67 @@
 #root {
-  max-width: 1280px;
+  max-width: 1400px;
+  height: 100vh;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 0 2rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+._home .main_view_spot {
+  height: 100vh;
+  overflow-y: auto;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+._home .main_view_spot::-webkit-scrollbar {
+  display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+._home ._header,
+._home ._section,
+._home ._header .container,
+._home ._section .container {
+  height: 100%;
 }
 
-.card {
-  padding: 2em;
+._home ._header .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.read-the-docs {
-  color: #888;
+._home ._header .text_container,
+._home ._section .text_container {
+  font-size: 8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+._section .sub_title {
+  font-size: 4.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.icon_tag {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #dcebf7;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  color: var(--dt-primarry-color);
+}
+
+.card_tiles_section{
+  position: relative;
+}
+
+.card_tiles_section .container{
+  position: unset;
 }
