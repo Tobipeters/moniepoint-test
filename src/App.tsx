@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { PiDnaLight, PiTooth, PiAtomLight } from "react-icons/pi";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
+// import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
 gsap.registerPlugin(ScrollTrigger);
 
