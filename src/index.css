@@ -1,12 +1,17 @@
 :root {
-  font-family: 'Arimo', sans-serif;
-  --dt-primarry-color:#ff5929
+  font-family: "Arimo", sans-serif;
+  --dt-primarry-color: #ff5929;
 }
-
 
 body {
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  /* z-index: 1; */
+  overflow-y: auto;
 }
 
 /* Button */
@@ -17,7 +22,7 @@ body {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   font-weight: 300;
-  font-family: 'Arimo', sans-serif !important;
+  font-family: "Arimo", sans-serif !important;
 }
 
 .btn_primary {

@@ -2,16 +2,16 @@
   background: transparent;
   padding: 2rem 0;
   position: absolute;
-  bottom: 0;
+  top: calc(100vh - 120px);
   left: 0;
   right: 0;
-  z-index: 3;
+  z-index: 4;
 }
 
 ._footer .container {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: space-between !important;
 }
 
 ._footer .text_container {
@@ -45,7 +45,7 @@
   cursor: pointer;
 }
 
-._footer .icon_container .icons {
+._footer .icon_container .footer_icons {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,7 +54,7 @@
   margin-bottom: 1rem;
 }
 
-._footer .icon_container .icons svg {
+._footer .icon_container .footer_icons svg {
     padding: 0.25rem;
     background: rgba(245, 222, 178, 0.35);
     border-radius: 50%;

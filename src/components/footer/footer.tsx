@@ -17,13 +17,13 @@ export const Footer = () => {
         </div>
 
         <div className="icon_container fadeUp">
-          <div className="icons">
+          <div className="footer_icons">
             <PiInstagramLogo />
             <PiYoutubeLogo />
             <PiFacebookLogo />
           </div>
 
-          <div className="text">Best Start Up of 2023</div>
+          <div className="footer_text">Best Start Up of 2023</div>
         </div>
       </div>
     </footer>

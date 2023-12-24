@@ -1,26 +1,29 @@
 #root {
   max-width: 1400px;
-  height: 100vh;
   margin: 0 auto;
   padding: 0 2rem;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1;
+  /* position: relative;
+  height: 100%; */
 }
 
-._home .main_view_spot {
+/* ._home .main_view_spot {
   height: 100vh;
   overflow-y: auto;
-}
+} */
 
 ._home .main_view_spot::-webkit-scrollbar {
   display: none;
 }
 
 ._home ._header,
-._home ._section,
+._home ._section {
+  height: 100vh !important;
+  position: relative;
+  overflow-y: hidden;
+}
+
+
+
 ._home ._header .container,
 ._home ._section .container {
   height: 100%;
@@ -32,8 +35,23 @@
   justify-content: center;
 }
 
-._home ._header .text_container,
-._home ._section .text_container {
+.revo_section .container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.revo_text_view {
+  position: absolute;
+  height: 100vh;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.section_text {
   font-size: 8rem;
   font-weight: 300;
   text-transform: uppercase;
@@ -58,10 +76,27 @@
   color: var(--dt-primarry-color);
 }
 
-.card_tiles_section{
+.card_tiles_section {
   position: relative;
 }
 
-.card_tiles_section .container{
+.card_tiles_section .container {
   position: unset;
+}
+
+.explore_section {
+  position: relative;
+}
+
+.explore_section .container{
+
+}
+
+.explore_view_spot{
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  align-items: center;
+
 }

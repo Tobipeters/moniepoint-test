@@ -4,6 +4,8 @@ import { CgMenuRight } from "react-icons/cg";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { flipCardAnimnation } from "..";
+// import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
+
 
 export const NavBar = () => {
   const menuRef = useRef(null);
@@ -11,12 +13,17 @@ export const NavBar = () => {
   const btnContainerRef = useRef(null);
 
   useEffect(() => {
+
     const menu = menuRef.current;
     const logo = logoRef.current;
     const btnContainer = btnContainerRef.current;
 
     const tl = gsap.timeline({
       defaults: { opacity: 1, y: "-90%", ease: "power3.out" },
+      onComplete: () => {
+        // Enable body scrolling when all animations are done
+        // enableBodyScroll(bodyElement);
+      },
     });
 
     // Animation for menu, logo, and btnContainer
