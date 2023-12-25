@@ -8,16 +8,13 @@ import BgImg3 from "../../assets/card-img-3.avif";
 import BgImg4 from "../../assets/card-img-4.jpeg";
 
 export const flipCardAnimnation = () => {
-  // Get the elements to animate
   const elementsToAnimate = document.querySelectorAll(".card");
 
-  // Create a timeline
   const tl = gsap.timeline();
 
   elementsToAnimate.forEach((card, index) => {
-    // Add the tilt animation for each card
     tl.to(card, {
-      duration: 0.15, // Tilt animation duration
+      duration: 0.15,
       rotate:
         index === 0
           ? -12
@@ -27,21 +24,18 @@ export const flipCardAnimnation = () => {
           ? -28
           : index === 3
           ? -30
-          : -10, // Tilt the card by -10 degrees
+          : -10,
       ease: "power3.out",
     });
 
-    // Add a delay before moving up
     tl.to({}, { duration: 0.05 });
 
-    // Add the move up animation for each card
     tl.to(card, {
-      duration: 1, // Animation duration in seconds
-      y: "-100vh", // Move the card up by 100% of its height
-      ease: "power3.out", // Easing function
+      duration: 1,
+      y: "-100vh",
+      ease: "power3.out",
     });
 
-    // Add a delay before starting the next card animation
     if (index < elementsToAnimate.length - 1) {
       tl.to({}, { duration: 0.5 });
     }
@@ -75,7 +69,11 @@ export const FlipCard = () => {
   return (
     <div className="_card_container fadeUp">
       {allCards.map((item, id) => (
-        <div key={`${id}-${item.tag_name}`} className="card" style={{ backgroundImage: `url(${item.bgImg})` }}>
+        <div
+          key={`${id}-${item.tag_name}`}
+          className="card"
+          style={{ backgroundImage: `url(${item.bgImg})` }}
+        >
           <div className="d-flex align-items-end mx-auto tag">
             <div className="tag_icon">{item.tag_icon}</div>
             <div className="tag_text">{item.tag_name}</div>
