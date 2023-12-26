@@ -27,29 +27,29 @@ export const SplashScreen = () => {
       textItem1,
       { opacity: 1, width: "fit-content", duration: 0.5 },
       { width: 0, opacity: 0, display: "none", duration: 0.5 },
-      "+=0.5"
+      "+=0.25"
     );
     tl.fromTo(
       textItem2,
       { opacity: 1, width: "fit-content", duration: 0.5 },
       { width: 0, opacity: 0, display: "none", duration: 0.5 },
-      "-=0.5"
+      "-=0.25"
     );
 
-    tl.fromTo(".icon_item_1", { y: -26 }, { y: 0, duration: 0.75 });
+    tl.fromTo(".icon_item_1", { y: -26 }, { y: 0, duration: 0.5 });
     tl.fromTo(
       ".icon_text_item_1",
-      { y: -26, },
-      { y: 0, padding: 0, duration: 0.75 },
-      "-=0.5"
+      { y: -26 },
+      { y: 0, padding: 0, duration: 0.5 },
+      "-=0.25"
     );
 
-    tl.fromTo(".icon_item_2", { y: 26 }, { y: 0, duration: 0.75 });
+    tl.fromTo(".icon_item_2", { y: 26 }, { y: 0, duration: 0.5 });
     tl.fromTo(
       ".icon_text_item_2",
       { y: 26 },
-      { y: 0, padding: 0, duration: 0.75 },
-      "-=0.5"
+      { y: 0, padding: 0, duration: 0.5 },
+      "-=0.25"
     );
 
     tl.to(".icon_item_1", { x: 78, duration: 0.1 });
@@ -68,7 +68,7 @@ export const SplashScreen = () => {
       { opacity: 1, bottom: "44%", duration: 0.25 }
     );
 
-    tl.to(".splash_section", { opacity: 0, display: 'none', duration: 0.25 });
+    tl.to(".splash_section", { opacity: 0, display: "none", duration: 0.25 });
 
     return () => {
       tl.kill();

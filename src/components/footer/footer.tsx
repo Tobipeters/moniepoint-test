@@ -5,19 +5,40 @@ import {
   PiFacebookLogo,
   PiArrowDownLight,
 } from "react-icons/pi";
-import React from "react";
+import React, { useEffect } from "react";
+import gsap from "gsap"
 
 interface IProps {
   position?: "left" | "between" | "right";
+  showGoDown?: boolean;
 }
 
-export const Footer: React.FC<IProps> = ({ position = "between" }) => {
+export const Footer: React.FC<IProps> = ({
+  position = "between",
+  showGoDown = true,
+}) => {
+  useEffect(() => {
+    const tl = gsap.timeline({
+      defaults: { ease: "Power3.inOut", duration: 0.5 },
+    });
+
+    tl.fromTo(
+      "._footer",
+      { y: "50vh", x: 0, opacity: 0 },
+      { y: 0, x: 0, opacity: 1 }
+    );
+
+    return () => {
+      tl.kill();
+    };
+  }, []);
+
   return (
     <footer className="_footer">
       <div className="container">
         <div className="text_container fadeUp">Your Smile, Our Passion</div>
 
-        {position === "between" && (
+        {position === "between" && showGoDown && (
           <div className="down_icon fadeUp">
             <PiArrowDownLight />
           </div>

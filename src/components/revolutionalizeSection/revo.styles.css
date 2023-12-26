@@ -2,6 +2,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0 2rem;
+  position: relative;
 }
 
 .modern_solution {
@@ -14,7 +15,8 @@
   align-items: center;
 }
 
-.icons_container .m_icon {
+.icons_container .m_icon,
+.vo_icon {
   display: inline-flex;
   width: 35px;
   height: 35px;
@@ -45,8 +47,11 @@
 }
 
 .assistance_container .assistance_holder {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   background-color: #dcebf7;
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   color: var(--dt-primarry-color);
   padding: 0.5rem 1.5rem;
   border-radius: 20px;
@@ -116,14 +121,57 @@
 }
 
 .is_icon {
-    display: inline-flex;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #dcebf7;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.75rem;
-    color: var(--dt-primarry-color);
-    margin-left: 0.25rem;
-  }
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #dcebf7;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--dt-primarry-color);
+  margin-left: 0.25rem;
+}
+
+.video_overlay {
+  display: inline-flex;
+  border-radius: 17px;
+  width: 200px;
+  height: 120px;
+  background-image: url("../../assets/video_overlay.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  top: -3.5rem;
+  opacity: 0;
+}
+
+.video_overlay .vo_icon {
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+}
+
+.get_started_container {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--dt-primarry-color);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.modern_solution,
+.assistance_container,
+.rounded_img_container,
+.img_stack_container {
+  display: none;
+  opacity: 0;
+}

@@ -12,37 +12,27 @@ export const NavBar = () => {
   const btnContainerRef = useRef(null);
 
   useEffect(() => {
-    const menu = menuRef.current;
-    const logo = logoRef.current;
-    const btnContainer = btnContainerRef.current;
 
     const tl = gsap.timeline({
       defaults: { opacity: 1, y: "-90%", ease: "power3.out" },
       onComplete: () => {},
-      delay: 6,
+      delay: 5,
     });
-
-    tl.fromTo(menu, { y: "-100%" }, { opacity: 1, y: "0%", duration: 1 }, 0);
-    tl.fromTo(logo, { y: "-100%" }, { opacity: 1, y: "0%", duration: 1 }, 0);
-    tl.fromTo(
-      btnContainer,
-      { y: "-100%" },
-      { opacity: 1, y: "0%", duration: 1 },
-      0
-    );
+    
+    tl.fromTo("._nav", { y: "-100%" }, { opacity: 1, y: 0, duration: 0.5 }, "+=0.1");
 
     tl.fromTo(
       ".icon",
       { opacity: 1, x: "100%", y: "0%" },
       { opacity: 1, x: "0%", y: "0%", duration: 1, zIndex: 2 },
-      "+=0.5"
+      "-=0.25"
     );
 
     tl.fromTo(
       ".logo_text",
       { opacity: 0, x: "-100%", y: "0%" },
       { opacity: 1, x: "0%", y: "0%", duration: 1 },
-      "-=0.5"
+      "-=0.25"
     );
 
     tl.eventCallback("onComplete", () => {
