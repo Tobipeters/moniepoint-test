@@ -6,7 +6,7 @@ import {
   PiArrowDownLight,
 } from "react-icons/pi";
 import React, { useEffect } from "react";
-import gsap from "gsap"
+import gsap from "gsap";
 
 interface IProps {
   position?: "left" | "between" | "right";
@@ -54,7 +54,7 @@ export const Footer: React.FC<IProps> = ({
           <div className="footer_text">Best Start Up of 2023</div>
         </div>
 
-        {position !== "between" && <div>&nbsp;</div>}
+        {position !== "between" && <div style={{ width: "250px" }}>&nbsp;</div>}
       </div>
     </footer>
   );
