@@ -13,6 +13,10 @@
   padding: 1.5rem 0;
 }
 
+._card_tiles_container::-webkit-scrollbar {
+  display: none;
+}
+
 ._card_tiles_container .card_tile {
   height: 310px;
   background-color: rgba(163, 163, 163, 0.5);

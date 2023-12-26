@@ -14,6 +14,14 @@ body {
   overflow-y: auto;
 }
 
+body::-webkit-scrollbar {
+  width: 6px;
+}
+body::-webkit-scrollbar-thumb {
+  background: var(--dt-primarry-color);
+  border-radius: 4px;
+}
+
 /* Button */
 ._btn {
   border-width: 1.5px;

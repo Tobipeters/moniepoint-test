@@ -46,12 +46,12 @@
 }
 
 .section_text {
-  font-size: 7rem;
+  font-size: 6.5rem;
   font-weight: 300;
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 ._section .sub_title {
