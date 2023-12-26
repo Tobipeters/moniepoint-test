@@ -5,6 +5,7 @@ import {
   FlipCard,
   CardTiles,
   SplashScreen,
+  RevolutionalizeSection
 } from "./components";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
@@ -88,17 +89,7 @@ export const App = () => {
           <Footer />
         </header>
 
-        <section className="_section revo_section">
-          <div className="container">
-            <div className="revo_text_view">
-              <div className="text_container section_text fadeUp">
-                Revolutionizing dental care with technology
-              </div>
-            </div>
-          </div>
-
-          <Footer />
-        </section>
+        <RevolutionalizeSection />
 
         <section className="_section explore_section" ref={exploreSectionRef}>
           <div className="container">
@@ -139,7 +130,7 @@ export const App = () => {
             </div>
           </div>
 
-          <Footer />
+          <Footer position={"left"} />
         </section>
         {/* </div> */}
       </main>

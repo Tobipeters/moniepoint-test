@@ -1,0 +1,129 @@
+.revo_text_view .text_container .m_main_text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0 2rem;
+}
+
+.modern_solution {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.modern_solution .icons_container {
+  display: inline-flex;
+  align-items: center;
+}
+
+.icons_container .m_icon {
+  display: inline-flex;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #dcebf7;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  color: var(--dt-primarry-color);
+}
+
+.icons_container .m_icon svg {
+  font-size: 1.15rem !important;
+}
+
+.modern_solution .m_text {
+  font-size: 0.875rem !important;
+  font-weight: 500;
+  text-transform: capitalize;
+
+  margin-top: 0.5rem;
+}
+
+.assistance_container,
+.rounded_img_container,
+.img_stack_container {
+  display: inline-flex;
+}
+
+.assistance_container .assistance_holder {
+  background-color: #dcebf7;
+  font-size: 1.25rem;
+  color: var(--dt-primarry-color);
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  height: 45px;
+}
+
+.ass_icon {
+  font-size: 2rem;
+  background: var(--dt-primarry-color);
+  color: #ffffff;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rounded_img_container img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.rounded_img_container .r_icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #dcebf7;
+  color: var(--dt-primarry-color);
+  font-size: 6rem;
+  margin-left: -10%;
+  position: relative;
+  z-index: -1;
+}
+
+.img_stack_container {
+  align-items: center;
+  width: fit-content;
+}
+
+.img_stack_container img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 4;
+}
+
+.img_stack_container img:nth-child(2) {
+  z-index: 3;
+  margin-left: -10%;
+}
+
+.img_stack_container img:nth-child(3) {
+  z-index: 2;
+  margin-left: -10%;
+}
+
+.img_stack_container img:nth-child(4) {
+  z-index: 1;
+  margin-left: -10%;
+}
+
+.is_icon {
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #dcebf7;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75rem;
+    color: var(--dt-primarry-color);
+    margin-left: 0.25rem;
+  }

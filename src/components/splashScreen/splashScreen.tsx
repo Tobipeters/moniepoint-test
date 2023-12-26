@@ -41,7 +41,7 @@ export const SplashScreen = () => {
       ".icon_text_item_1",
       { y: -26, },
       { y: 0, padding: 0, duration: 0.75 },
-      "+=0.5"
+      "-=0.5"
     );
 
     tl.fromTo(".icon_item_2", { y: 26 }, { y: 0, duration: 0.75 });
