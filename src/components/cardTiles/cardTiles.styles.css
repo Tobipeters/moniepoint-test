@@ -15,7 +15,7 @@
 
 ._card_tiles_container .card_tile {
   height: 310px;
-  background-color: violet;
+  background-color: rgba(163, 163, 163, 0.5);
   width: 100%;
   border-radius: 25px;
   padding: 1.25rem;

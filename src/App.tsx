@@ -5,7 +5,7 @@ import {
   FlipCard,
   CardTiles,
   SplashScreen,
-  RevolutionalizeSection
+  RevolutionalizeSection,
 } from "./components";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
@@ -27,7 +27,7 @@ export const App = () => {
         onComplete: () => {
           gsap.to(elementToAnimate, {
             duration: 0.5,
-            y: 0, 
+            y: 0,
           });
         },
       });
@@ -77,7 +77,6 @@ export const App = () => {
       <main className="_home">
         <NavBar />
 
-        {/* <div className="main_view_spot"> */}
         <header className="_header">
           <div className="container">
             <div className="text_container section_text fadeUp">
@@ -132,7 +131,6 @@ export const App = () => {
 
           <Footer position={"left"} />
         </section>
-        {/* </div> */}
       </main>
     </>
   );

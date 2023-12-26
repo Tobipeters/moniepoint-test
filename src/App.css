@@ -2,14 +2,7 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 2rem;
-  /* position: relative;
-  height: 100%; */
 }
-
-/* ._home .main_view_spot {
-  height: 100vh;
-  overflow-y: auto;
-} */
 
 ._home .main_view_spot::-webkit-scrollbar {
   display: none;
@@ -89,10 +82,6 @@
 
 .explore_section {
   position: relative;
-}
-
-.explore_section .container{
-
 }
 
 .explore_view_spot{
