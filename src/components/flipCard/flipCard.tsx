@@ -28,8 +28,6 @@ export const flipCardAnimnation = () => {
       ease: "power3.out",
     });
 
-    tl.to({}, { duration: 0.05 });
-
     tl.to(card, {
       duration: 1,
       y: "-100vh",
