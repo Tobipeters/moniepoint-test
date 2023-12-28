@@ -14,10 +14,10 @@ export const CardTiles = () => {
     });
 
     tl.fromTo(".ct_odd", { y: 0, duration: 1.5 }, { y: -250 }, "+=0.25");
-    tl.fromTo(".ct_even", { y: -150, duration: 1.5 }, { y: 0 }, "-=0.25");
+    tl.fromTo(".ct_even", { y: -150, duration: 1.5 }, { y: 100 }, "-=0.25");
 
     tl.fromTo(".ct_odd", { y: -250, duration: 1.5 }, { y: -100 }, "+=0.1");
-    tl.fromTo(".ct_even", { y: 0, duration: 1.5 }, { y: -80 }, "-=0.1");
+    tl.fromTo(".ct_even", { y: 100, duration: 1.5 }, { y: -150 }, "-=0.1");
 
     const observer = new IntersectionObserver(
       (entries) => {

@@ -11,11 +11,13 @@ import gsap from "gsap";
 interface IProps {
   position?: "left" | "between" | "right";
   showGoDown?: boolean;
+  scrollRef?: React.RefObject<HTMLDivElement>;
 }
 
 export const Footer: React.FC<IProps> = ({
   position = "between",
   showGoDown = true,
+  scrollRef,
 }) => {
   useEffect(() => {
     const tl = gsap.timeline({
@@ -33,13 +35,24 @@ export const Footer: React.FC<IProps> = ({
     };
   }, []);
 
+  const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <footer className="_footer">
       <div className="container">
         <div className="text_container fadeUp">Your Smile, Our Passion</div>
 
         {position === "between" && showGoDown && (
-          <div className="down_icon fadeUp">
+          <div
+            className="down_icon fadeUp"
+            onClick={() =>
+              scrollToSection(scrollRef as React.RefObject<HTMLDivElement>)
+            }
+          >
             <PiArrowDownLight />
           </div>
         )}

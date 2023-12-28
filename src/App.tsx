@@ -15,6 +15,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export const App = () => {
+  const revoSectionRef = useRef<HTMLDivElement>(null);
   const exploreSectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -36,39 +37,6 @@ export const App = () => {
     animateElement();
   }, []);
 
-  useEffect(() => {
-    // const bodyElement: HTMLBodyElement = document.querySelector("body");
-    // disableBodyScroll(bodyElement);
-    const trackedElement = exploreSectionRef.current;
-
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-
-      // Log the scrollY value of the body
-      console.log("Body ScrollY:", scrollY);
-
-      if (trackedElement) {
-        const elementRect = trackedElement.getBoundingClientRect();
-        const elementTop = elementRect.top + scrollY;
-
-        console.log("elementTop", elementTop);
-
-        // Log the scrollY value when the tracked element is at a certain level
-        if (elementTop >= scrollY) {
-          console.log("Tracked Element reached scroll level 200");
-          // Perform actions when the element reaches the specified scroll level
-        }
-      }
-    };
-
-    // Attach the scroll event listener to window
-    window.addEventListener("scroll", handleScroll);
-
-    // Cleanup: remove the scroll event listener when the component is unmounted
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [exploreSectionRef]);
 
   return (
     <>
@@ -85,10 +53,10 @@ export const App = () => {
             <FlipCard />
           </div>
 
-          <Footer />
+          <Footer scrollRef={revoSectionRef} />
         </header>
 
-        <RevolutionalizeSection />
+        <RevolutionalizeSection revoSectionRef={revoSectionRef} />
 
         <section className="_section explore_section" ref={exploreSectionRef}>
           <div className="container">

@@ -1,5 +1,5 @@
 import { Footer } from "..";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import {
   PiDnaThin,
   PiToothThin,
@@ -14,13 +14,14 @@ import StackImg1 from "../../assets/card-img-1.jpeg";
 import StackImg2 from "../../assets/card-img-2.webp";
 import StackImg3 from "../../assets/card-img-4.jpeg";
 import gsap from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// gsap.registerPlugin(ScrollTrigger);
+interface IProps {
+  revoSectionRef: React.RefObject<HTMLDivElement>;
+}
 
-export const RevolutionalizeSection = () => {
-  const revoSectionRef = useRef<HTMLDivElement>(null);
-
+export const RevolutionalizeSection: React.FC<IProps> = ({
+  revoSectionRef,
+}) => {
   const imgStacks = [
     {
       photoSrc: StackImg1,
@@ -46,13 +47,9 @@ export const RevolutionalizeSection = () => {
       onComplete: () => {
         console.log("Revo section animation completed");
       },
+      delay: 3,
     });
 
-    tl.fromTo(
-      ".m_main_text",
-      { y: "50vh", x: 0, opacity: 0 },
-      { y: 0, x: 0, opacity: 1 }
-    );
     tl.fromTo(".mmt_1", { x: "40%" }, { x: 0 }, "-=0.5");
     tl.fromTo(".mmt_2", { x: 0 }, { x: "20%" }, "-=0.5");
     tl.fromTo(".mmt_3", { x: "30%" }, { x: 0 }, "-=0.5");
@@ -116,7 +113,7 @@ export const RevolutionalizeSection = () => {
     <section className="_section revo_section" ref={revoSectionRef}>
       <div className="container">
         <div className="revo_text_view">
-          <div className="text_container section_text fadeUp">
+          <div className="text_container section_text">
             <div className="m_main_text mmt_1">
               Revolutionizing
               <div className="modern_solution">
