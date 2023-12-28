@@ -9,9 +9,6 @@ export const SplashScreen = () => {
   useEffect(() => {
     const tl = gsap.timeline({
       defaults: { opacity: 1, ease: "Power2.inOut" },
-      onComplete: () => {
-        console.log("SplashScreen animation completed");
-      },
     });
 
     if (!itemsContainerRef.current) return;
@@ -36,21 +33,24 @@ export const SplashScreen = () => {
       "-=0.25"
     );
 
-    tl.fromTo(".icon_item_1", { y: -26 }, { y: 0, duration: 0.5 });
+    tl.fromTo(".icon_item_1", { y: -26 }, { rotate: 90, y: 0, duration: 0.5 });
     tl.fromTo(
       ".icon_text_item_1",
-      { y: -26 },
-      { y: 0, padding: 0, duration: 0.5 },
+      { y: -26, width: "fit-content" },
+      { rotate: 90, y: 0, duration: 0.5 },
       "-=0.25"
     );
 
     tl.fromTo(".icon_item_2", { y: 26 }, { y: 0, duration: 0.5 });
     tl.fromTo(
       ".icon_text_item_2",
-      { y: 26 },
-      { y: 0, padding: 0, duration: 0.5 },
+      { rotate: 180, y: 26, width: "fit-content" },
+      { rotate: 270, y: 0, duration: 0.5 },
       "-=0.25"
     );
+
+    tl.to(".icon_item_1", { rotate: 0, duration: 0.1 });
+    tl.to(".icon_text_item_1", { rotate: 0, duration: 0.1 });
 
     tl.to(".icon_item_1", { x: 78, duration: 0.1 });
     tl.to(".icon_text_item_1", { x: 26, duration: 0.1 });
