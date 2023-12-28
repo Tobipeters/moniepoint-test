@@ -10,7 +10,7 @@ import BgImg4 from "../../assets/card-img-4.jpeg";
 export const flipCardAnimnation = () => {
   const elementsToAnimate = document.querySelectorAll(".card");
 
-  const tl = gsap.timeline();
+  const tl = gsap.timeline({ ease: "Power1.inOut" });
 
   elementsToAnimate.forEach((card, index) => {
     tl.to(card, {

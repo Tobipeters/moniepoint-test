@@ -21,7 +21,8 @@ export const Footer: React.FC<IProps> = ({
 }) => {
   useEffect(() => {
     const tl = gsap.timeline({
-      defaults: { ease: "Power3.inOut", duration: 0.5 },
+      defaults: { ease: "Power1.inOut", duration: 0.5 },
+      delay: 5,
     });
 
     tl.fromTo(
@@ -29,6 +30,20 @@ export const Footer: React.FC<IProps> = ({
       { y: "50vh", x: 0, opacity: 0 },
       { y: 0, x: 0, opacity: 1 }
     );
+
+    const iconTl = gsap.timeline({ repeat: -1, duration: 1.5 });
+    iconTl.fromTo(
+      ".d_icon",
+      {
+        y: -20,
+        duration: 1.5,
+        ease: "Power1.easeInOut",
+      },
+      { y: 5, duration: 2.5, ease: "Power1.easeInOut" },
+      "+=0.5"
+    );
+
+    tl.add(iconTl, "<");
 
     return () => {
       tl.kill();
@@ -53,7 +68,9 @@ export const Footer: React.FC<IProps> = ({
               scrollToSection(scrollRef as React.RefObject<HTMLDivElement>)
             }
           >
-            <PiArrowDownLight />
+            <div className="d_icon">
+              <PiArrowDownLight />
+            </div>
           </div>
         )}
 

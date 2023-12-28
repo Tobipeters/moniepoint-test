@@ -8,7 +8,8 @@ export const SplashScreen = () => {
 
   useEffect(() => {
     const tl = gsap.timeline({
-      defaults: { opacity: 1, ease: "Power2.inOut" },
+      defaults: { opacity: 1, ease: "Power1.inOut" },
+      delay: 0.5
     });
 
     if (!itemsContainerRef.current) return;
@@ -22,13 +23,13 @@ export const SplashScreen = () => {
 
     tl.fromTo(
       textItem1,
-      { opacity: 1, width: "fit-content", duration: 0.5 },
+      { opacity: 0, width: "fit-content", duration: 0.5 },
       { width: 0, opacity: 0, display: "none", duration: 0.5 },
       "+=0.25"
     );
     tl.fromTo(
       textItem2,
-      { opacity: 1, width: "fit-content", duration: 0.5 },
+      { opacity: 0, width: "fit-content", duration: 0.5 },
       { width: 0, opacity: 0, display: "none", duration: 0.5 },
       "-=0.25"
     );

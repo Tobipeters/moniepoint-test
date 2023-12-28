@@ -43,14 +43,14 @@ export const RevolutionalizeSection: React.FC<IProps> = ({
 
   useEffect(() => {
     const tl = gsap.timeline({
-      defaults: { opacity: 1, x: 0, ease: "Power3.inOut", duration: 0.5 },
+      defaults: { opacity: 1, x: 0, ease: "Power2.inOut", duration: 0.5 },
       onComplete: () => {
         console.log("Revo section animation completed");
       },
-      delay: 3,
+      // delay: 5,
     });
 
-    tl.fromTo(".mmt_1", { x: "40%" }, { x: 0 }, "-=0.5");
+    tl.fromTo(".mmt_1", { x: "40%" }, { x: 0 }, '+=0.5');
     tl.fromTo(".mmt_2", { x: 0 }, { x: "20%" }, "-=0.5");
     tl.fromTo(".mmt_3", { x: "30%" }, { x: 0 }, "-=0.5");
     tl.fromTo(

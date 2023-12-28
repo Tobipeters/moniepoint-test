@@ -14,7 +14,7 @@ export const NavBar = () => {
   useEffect(() => {
 
     const tl = gsap.timeline({
-      defaults: { opacity: 1, y: "-90%", ease: "power3.out" },
+      defaults: { opacity: 1, y: "-90%", ease: "power1.out" },
       onComplete: () => {},
       delay: 5,
     });

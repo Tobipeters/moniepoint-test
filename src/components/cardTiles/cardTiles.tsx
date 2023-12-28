@@ -9,7 +9,7 @@ export const CardTiles = () => {
 
   useEffect(() => {
     const tl = gsap.timeline({
-      defaults: { opacity: 1, duration: 0.75, ease: "Power3.inOut" },
+      defaults: { opacity: 1, duration: 0.75, ease: "Power1.inOut" },
       delay: 3
     });
 
