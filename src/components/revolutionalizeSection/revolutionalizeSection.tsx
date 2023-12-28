@@ -14,6 +14,7 @@ import StackImg1 from "../../assets/card-img-1.jpeg";
 import StackImg2 from "../../assets/card-img-2.webp";
 import StackImg3 from "../../assets/card-img-4.jpeg";
 import gsap from "gsap";
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
 interface IProps {
   revoSectionRef: React.RefObject<HTMLDivElement>;
@@ -43,14 +44,21 @@ export const RevolutionalizeSection: React.FC<IProps> = ({
 
   useEffect(() => {
     const tl = gsap.timeline({
-      defaults: { opacity: 1, x: 0, ease: "Power2.inOut", duration: 0.5 },
-      onComplete: () => {
-        console.log("Revo section animation completed");
+      defaults: {
+        opacity: 1,
+        ease: "Power2.inOut",
+        duration: 0.65,
       },
-      // delay: 5,
+      onStart: () => {
+        disableBodyScroll(document.body);
+      },
+      onComplete: () => {
+        enableBodyScroll(document.body);
+      },
+      // delay: 1.75
     });
 
-    tl.fromTo(".mmt_1", { x: "40%" }, { x: 0 }, '+=0.5');
+    tl.fromTo(".mmt_1", { x: "40%" }, { x: 0 }, "-=1");
     tl.fromTo(".mmt_2", { x: 0 }, { x: "20%" }, "-=0.5");
     tl.fromTo(".mmt_3", { x: "30%" }, { x: 0 }, "-=0.5");
     tl.fromTo(
@@ -95,7 +103,7 @@ export const RevolutionalizeSection: React.FC<IProps> = ({
           }
         });
       },
-      { threshold: 0.5 } // Adjust the threshold as needed
+      { threshold: 0.75 } // Adjust the threshold as needed
     );
 
     if (revoSectionRef.current) {

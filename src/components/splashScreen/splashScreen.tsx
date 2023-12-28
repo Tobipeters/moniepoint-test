@@ -2,6 +2,8 @@ import "./splash.styles.css";
 import { PiArrowRightLight, PiTooth } from "react-icons/pi";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
+
 
 export const SplashScreen = () => {
   const itemsContainerRef = useRef<HTMLElement>(null);
@@ -9,7 +11,13 @@ export const SplashScreen = () => {
   useEffect(() => {
     const tl = gsap.timeline({
       defaults: { opacity: 1, ease: "Power1.inOut" },
-      delay: 0.5
+      delay: 0.5,
+      onStart: () => {
+        disableBodyScroll(document.body);
+      },
+      onComplete: () => {
+        enableBodyScroll(document.body);
+      },
     });
 
     if (!itemsContainerRef.current) return;

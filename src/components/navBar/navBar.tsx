@@ -4,6 +4,7 @@ import { CgMenuRight } from "react-icons/cg";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { flipCardAnimnation } from "..";
+import { disableBodyScroll } from "body-scroll-lock";
 
 
 export const NavBar = () => {
@@ -15,8 +16,13 @@ export const NavBar = () => {
 
     const tl = gsap.timeline({
       defaults: { opacity: 1, y: "-90%", ease: "power1.out" },
-      onComplete: () => {},
       delay: 5,
+      onStart: () => {
+        disableBodyScroll(document.body);
+      },
+      // onComplete: () => {
+      //   enableBodyScroll(document.body);
+      // },
     });
     
     tl.fromTo("._nav", { y: "-100%" }, { opacity: 1, y: 0, duration: 0.5 }, "+=0.1");

@@ -1,8 +1,15 @@
+.revo_text_view{
+  display: flex;
+  align-items: center;
+}
+
+
 .revo_text_view .text_container .m_main_text {
   display: inline-flex;
   align-items: center;
   gap: 0 2rem;
   position: relative;
+  /* opacity: 0; */
 }
 
 .modern_solution {
