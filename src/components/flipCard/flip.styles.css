@@ -1,10 +1,10 @@
 ._card_container {
   position: absolute;
   width: 500px;
-  height: 500px;
+  height: 440px;
   left: 50%;
   top: 50%;
-  margin-top: -250px;
+  margin-top: -220px;
   margin-left: -250px;
   display: flex;
   justify-content: center;
