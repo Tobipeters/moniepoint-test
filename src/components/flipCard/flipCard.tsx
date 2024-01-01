@@ -62,7 +62,7 @@ export const FlipCard = () => {
       tag_icon: <PiUserFocus />,
       bgImg: BgImg4,
     },
-  ];
+  ]; 
 
   return (
     <div className="_card_container fadeUp">
